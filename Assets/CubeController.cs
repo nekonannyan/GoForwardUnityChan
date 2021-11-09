@@ -10,13 +10,6 @@ public class CubeController : MonoBehaviour
     // 消滅位置
     private float deadLine = -10;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // キューブを移動させる
@@ -27,5 +20,15 @@ public class CubeController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    //オブジェクトに当たったら実行する
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //オブジェクトの名前がブロックかgroundならば音を鳴らす
+        if (collision.gameObject.name == this.name
+        ||  collision.gameObject.name == "ground")
+        {
+            GetComponent<AudioSource>().Play();
+        }  
     }
 }
