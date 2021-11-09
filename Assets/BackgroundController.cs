@@ -11,13 +11,6 @@ public class BackgroundController : MonoBehaviour
     // ”wŒiŠJŽnˆÊ’u
     private float startLine = 17.8f;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // ”wŒi‚ðˆÚ“®‚·‚é

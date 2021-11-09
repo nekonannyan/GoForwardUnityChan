@@ -20,8 +20,8 @@ public class UIController : MonoBehaviour
     void Start()
     {
         //シーンビューからオブジェクトの実態を検索する
-        this.gameOverText  = GameObject.Find("GameOver");
-        this.runLengthText = GameObject.Find("RunLength"); 
+        this.gameOverText = GameObject.Find("GameOver");
+        this.runLengthText = GameObject.Find("RunLength");
     }
 
     void Update()
@@ -32,7 +32,7 @@ public class UIController : MonoBehaviour
             //走った距離を更新する
             this.len += this.speed * Time.deltaTime;
             //走った距離を表示する
-            this.runLengthText.GetComponent<Text>().text = "Distance: " + len.ToString ("F2") + "m";
+            this.runLengthText.GetComponent<Text>().text = "Distance: " + len.ToString("F2") + "m";
         }
         // ゲームオーバーになった場合
         if (this.isGameOver == true)
